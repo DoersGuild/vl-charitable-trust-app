@@ -32,6 +32,6 @@ version   = "1.0.0">
     <icon src="icons/android/res/mipmap-xxhdpi/ic_launcher.png" gap:platform="android" gap:density="xxhdpi" />
     
 
-    <gap:splash src="popup.jpg" />
+    <splash src="splash.png" />
 
 </widget>
