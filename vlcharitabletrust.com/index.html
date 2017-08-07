@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width">
+
+
+<title>Welcome To VLC</title>
+<link href="style/vlc.css" type="text/css" rel="stylesheet"/>
+<!--appriciations-->
+<script src="style/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+jQuery.cookie = function (key, value, options) {
+
+// key and at least value given, set cookie...
+if (arguments.length > 1 && String(value) !== "[object Object]") {
+options = jQuery.extend({}, options);
+
+if (value === null || value === undefined) {
+options.expires = -1;
+}
+
+if (typeof options.expires === 'number') {
+var days = options.expires, t = options.expires = new Date();
+t.setDate(t.getDate() + days);
+}
+
+value = String(value);
+
+return (document.cookie = [
+encodeURIComponent(key), '=',
+options.raw ? value : encodeURIComponent(value),
+options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+options.path ? '; path=' + options.path : '',
+options.domain ? '; domain=' + options.domain : '',
+options.secure ? '; secure' : ''
+].join(''));
+}
+
+// key and possibly options given, get cookie...
+options = value || {};
+var result, decode = options.raw ? function (s) { return s; } : decodeURIComponent;
+return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? decode(result[1]) : null;
+};
+//]]>
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+if($.cookie('popup_user_login') != 'yes'){
+$('#fanback').delay(30000).fadeIn('medium');
+$('#fanclose, #fan-exit').click(function(){
+$('#fanback').stop().fadeOut('medium');
+});
+}
+});
+</script>
+<script src="style/jquery.bxslider.min.js" type="text/javascript"></script>
+<link href="style/jquery.bxslider.css" rel="stylesheet" type="text/css" />
+<link href="style/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<!--bottom gallery-->
+	<link rel="stylesheet" href="style/screen.css">
+	<link rel="stylesheet" href="style/lightbox.css">
+	<script src="js/lightbox.js"></script>
+    <!--banner effect-->
+     <script src="js/beaverslider&#32;2.0-compressed.js"></script>        <!-- link to a framework -->
+	<script src="js/beaverslider&#32;2.0-effects-compressed.js"></script> <!-- link to a set of effects -->
+    
+    <!-- if you want to make styling link some css files -->
+	<script>
+	
+	$(function(){
+      var slider = new BeaverSlider({
+        structure: {
+          container: {
+            id: "banner",
+            width: 1010,
+            height: 442
+          }
+        },
+        content: {
+          images: [
+            "images/vlct-banner.png","images/vlct-banner.png",
+            "images/vlct-banner.png","images/banner3.jpg",
+            "images/banner2.jpg","images/banner4.jpg",
+			"images/banner5.jpg","images/banner6.jpg",
+			"images/banner7.jpg","images/banner8.jpg",
+			"images/banner9.jpg","images/banner.jpg"
+			
+          ]
+        },
+        animation: {
+          effects: effectSets["slider: big set 2"],
+          interval: 1000
+        }
+      });   
+	});
+	
+	</script>
+    <!--banner-->
+    <!--sticky-->
+
+<script type="text/javascript">
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+$(document).ready(function(){
+	$(window).scroll(function(){
+		var scrollTop = 90;
+		if($(window).scrollTop() >= scrollTop){
+			$('.nav').css({
+				position : 'fixed',
+				top : '0'
+			});
+		}
+		if($(window).scrollTop() < scrollTop){
+			$('.nav').removeAttr('style');	
+		}
+	})
+})
+</script>
+
+<!--sticky-->
+    
+    
+<script type="text/javascript">
+         $(document).ready(function () {          
+            $('.bxslider').bxSlider({
+                 mode: 'vertical',
+                 slideMargin: 3,
+                auto:true
+            });            
+        });
+   </script>
+<!--appriciations-->
+<!--navtop-->
+<script type="text/javascript">
+    $(function() {
+      if ($.browser.msie && $.browser.version.substr(0,1)<7)
+      {
+        $('li').has('ul').mouseover(function(){
+            $(this).children('ul').show();
+            }).mouseout(function(){
+            $(this).children('ul').hide();
+            })
+      }
+    });        
+</script>
+<!--[if lt IE 9]>
+   <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+   </script>
+<![endif]-->
+<script type='text/javascript'>
+jQuery(document).ready(function($) {
+    jQuery('#mega-menu').dcMegaMenu();
+});
+</script>
+
+</head>
+<body>
+<div id="maincontainer">
+  <!--container-->
+  <div class="topnav">
+  <!--topnav_left-->
+  <div class="topnav_left">
+  	<div class="social_icons"> 
+    <a href="index.html#" class="twitter"></a>
+    <a href="https://www.facebook.com/pages/Vasantha-lakshmi-charitable-trust/137144016478337?ref=br_tf" class="facebook"></a>
+    <a href="index.html#" class="pinterest"></a>
+    </div>
+  </div>
+  <!--topnav_left-->
+   <!--topnav_right-->
+  <div class="topnav_right">
+  <b style="font-size:17px;"><a href="contactus.html" style="font-size:18px;padding-right:5px;">contact us:</a>+91 861 2347276</b>
+  </div>
+   <!--topnav_right-->
+  </div>
+  <!--banner-->
+  <header class="svr-header">
+    <!--logo-->
+    <div class="logo"><img src="images/logo.jpg" alt="VASANTHA LAKSHMI CHARITABLE TRUST" title="VASANTHA LAKSHMI CHARITABLE TRUST" /></div>
+    <!--logo end-->
+  </header>
+  <!--header end-->
+  <!--nav-->
+  <nav class="nav">
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#">About Us</a>
+        <ul>
+          <li><a href="aboutus.html">FOUNDER</a></li>
+          <li><a href="chairperson.html">CHAIRPERSON</a></li>
+          <li><a href="Vision_Mission.html">VISION & MISSION</a></li>
+          <li><a href="focusareas.html">FOCUS AREAS</a></li>
+          <li><a href="strength.html">OUR STRENGTH</a></li>
+        </ul>
+      </li>
+      <li><a href="watwedo.html">What we do</a>
+          <ul>
+          <li><a href="watwedo.html">FREE MEDICAL SERVICES</a></li>
+          <li><a href="women_empowerment.html">WOMEN EMPOWERMENT</a></li>
+          <li><a href="child_welfare.html">CHILD WELFARE PROGRAMMS</a></li>
+          <li><a href="disabled_services.html">DISABLED SERVICES</a></li>
+          <li><a href="culture.html">CULTURE & SOCIAL ACTIVITIES</a></li>
+          <li><a href="welfare_training.html">WElFARE TRAINING PROGRAMS</a></li>
+        </ul>
+      
+      </li>
+      <li><a href="index.html#">Projects</a>
+	     <ul>
+          <li><a href="shakthi.html">SHAKTHI</a></li>
+          <li><a href="saparya.html">SAPARYA</a></li>
+          <li><a href="athmeya.html">ATHMEYA</a></li>
+          <li><a href="alambana.html">ALAMBANA</a></li>
+          <li><a href="sanjeevani.html">SANJEEVANI</a></li>
+          <li><a href="samrakshana.html">SAMRAKSHANA</a></li>
+        </ul>
+	  
+	  
+	  </li>
+      <li><a href="index.html#">Media Center</a>
+	     <ul>
+          <li><a href="pressclipings.html">PRESS CLIPINGS</a></li>
+          <li><a href="appreciations.html">APPRECIATIONS</a></li>
+          <li><a href="visitors.html">VISITORS</a></li>
+          <li><a href="awards-rewards.html">AWARDS & REWARDS</a></li>
+          <li><a href="gallery.html">PHOTO GALLERY</a></li>
+          <li><a href="video.html">VIDEO GALLERY</a></li>
+        </ul>
+	  
+	  
+	  </li>
+     <li><a href="donation.html">Donate Now</a>
+	    <ul>
+          <li><a href="ravivasantham.html">RAVI VASANTHAM</a></li>
+		 
+	    </ul>
+	  </li>
+      <li><a href="contactus.html">Contact us</a></li>
+    </ul>
+  </nav>
+  <!--nav end-->
+  <!--banner-->
+   <div class="banner">
+  
+  <div class="banner" id="banner" style="border:4px solid #e4e8e8;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-o-border-radius:10px;">
+	</div>
+  
+  
+  <!-- <img src="images/banner.jpg" alt="VLC TRUST" title="VLC TRUST" />--> </div>
+  <!--banner end-->
+  <div class="ceomsg"> <img src="images/vlctrust-lakshmi.jpg" alt="Lakshmi TRUST" title="Lakshmi TRUST"/>
+    <h1>"TO REACH THE UNREACHED AND TO SERVE THE UNSERVED"</h1>
+    <p>"NURTURING THE UNWANTED LIVES WITH HUMANITY THROUGH A TOUCH OF LOVE AND <br/>
+      COMPASSION WHERE THEY CAN BUILD THEIR LIVES WITH MORE <br/>
+      SECURITY AND DIGINITY" </p>
+  </div>
+  <section class="svr-section">
+    <div class="innerwrapper-top">
+      <aside class="leftaside">
+        <h2>Welcome to Vasantha Lakshmi Charitable Trust</h2>
+        <p>The roots of the true achievement lie in the will to become the best that you can become. In a bid to provide solace and shelter to the fractured hopes of disadvantaged groups in the society and to foster its role to keep a pace with nerve racking speed the world is changing with, the Vasantha Lakshmi Charitable Trust & Research Center, Nellore established in the year 1993, under Indian Trust Act 1882 Registered in the year 1998, Regd No.82/98 by renowned pediatrician of Nellore District Dr. T. Ravi Kumar., M.D., D.C.H (Pead.).<br/>
+          <br/>
+          Recognizing the ideology of social service as espoused and practiced by Smt. T. Vasantha Lakshmi, M.Com.., Spl. B.Ed (M.R)., L.L.B on whose name the Trust was founded has resolved to launch a wide range of social welfare and development activities imbibed with two distinct objectives vis-a-vis Social Service and Human Development to carry out necessary architectural correction to improve the quality of life of the most disadvantaged groups of the society. The Mission adopts a synergistic approach &#34;<b>to reach the unreached</b>&#34; areas of Nellore District of Andhra Pradesh, South India. Having been in this noble work for the last two Decades Vasantha Lakshmi Charitable Trust & Research Center could venture to expand its services to the Kadapa and Ongole districts of Andhra Pradesh.</p>
+        <a href="index.html#">Learn more..</a> </aside>
+      <!--appriations-->
+      <aside class="rightaside">
+        <h2>Appreciations</h2>
+        <ul class="bxslider">
+          <li style="width:280px !important;">
+            <blockquote>I am aware of the good work has been done by Vasantha Lakshmi Charitable trust and Research Center for the past 20 years, especially in the field of disabled sector in &quotSAMRAKSHANA&quot unit from the decade. They have done tremendous work in Early Intervention, Home Based Training Program and Special Schools for Exceptional Children.I wish them all success in their future endeavors.
+              <p style="text-align:right;margin-right:10px;">- <strong>R. Sunder Vadan, I.F.S </strong> <br/>
+                Commissioner Disabled Welfare & State Commissioner <br />
+               	</p>
+            </blockquote>
+          </li>
+          <li style="width:280px !important;">
+            <blockquote>I am glad to note that Vasantha Lakshmi Charitable trust and Research Center of Nellore, A.P has been striving for the well being of Women, Children, Disabled, Weaker Sections and downtrodden in particular the child development and women empowerment activities in Andhra Pradesh since 1998. VLCT & RC is instrumental to promote support to Mandal of Cuddapah district..
+              <p style="text-align:right;margin-right:10px;">- Jayesh Ranjan I.A.S  <br/>
+                Collector and District Magistrate, 
+                Cuddapah </p>
+            </blockquote>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+  <!--appriations-->
+  <!--bottom section panel-->
+  <section class="bsection">
+    <!--bottom left aside-->
+    <aside class="bleftaside">
+      <!--box1 statrt-->
+      <div class="blbox">
+        <h2><font color="Red">SHAKTHI:</font> </h2>
+        <p><a style="float:left; padding:0px;" href="shakthi.html"><img src="images/thub.jpg" alt="Trust" title="Trust"/></a>A Society where every deprived, deserted, downtrodden woman leads a healthy, fulfilling life of self-reliance and dignity and awakens the creative potential of women.. </p>
+        <a href="shakthi.html">Learn more..</a> </div>
+      <!--box1 end-->
+      <!--box1 statrt-->
+      <div class="blbox">
+        <h2><font color="#FF6600">SAPARYA:</font></h2>
+        <p><a style="float:left; padding:0px;" href="saparya.html"><img src="images/thub1.png" alt="Trust" title="Trust"/></a>Improve the quality of life of patients and committed to deliver and demonstrate excellence in everything we do through comfort, Love and Dignity.. </p>
+        <a href="saparya.html">Learn more..</a> </div>
+      <!--box1 end-->
+      <!--box1 statrt-->
+      <div class="blbox">
+        <h2><font color="#0000FF">ATHMEYA:</font></h2>
+        <p><a style="float:left; padding:0px;" href="athmeya.html"><img src="images/thub2.png" alt="Trust" title="Trust"/></a>To rehabilitate vulnerable orphans and abandoned children in ATHMEYA, the centre of excellence for high quality education attained through the promotion of equitable access.. </p>
+        <a href="athmeya.html">Learn more..</a> </div>
+      <!--box1 end-->
+    </aside>
+    <!--bottom left end-->
+    <!--bottom right here-->
+    <aside class="brightaside">
+      <!--box1 statrt-->
+      <div class="blbox">
+        <h2><font color="#000000">ALAMBANA:</font></h2>
+        <p><a style="float:left; padding:0px;" href="alambana.html"><img src="images/thub3.png" alt="Trust" title="Trust"/></a>Older people have the right to live in dignity and security and to be free of exploitation and physical or mental abuse. <strong>ALAMBANA</strong> is an exceptional care home offering 24 hours... </p>
+        <a href="alambana.html">Learn more..</a> </div>
+      <!--box1 end-->
+      <!--box1 statrt-->
+      <div class="blbox">
+        <h2><font color="#66FF33">SANJEEVANI:</font></h2>
+        <p><a style="float:left; padding:0px;" href="sanjeevani.html"><img src="images/thub4.png" alt="Trust" title="Trust"/></a>Provide hygiene comfort and safe medical care for their well being healing with a human touch, love and compassion and strive to always uphold it...</p>
+        <a href="sanjeevani.html">Learn more..</a> </div>
+      <!--box1 end-->
+      <!--box1 statrt-->
+      <div class="blbox">
+        <h2 class="#FF00FF">SAMRAKSHANA:</h2>
+        <p><a style="float:left; padding:0px;" href="samrakshana.html"><img src="images/thub5.png" alt="Trust" title="Trust"/></a>Transforming lives with touch of humanity, love and compassion and make them self confident with maximum individuality. Empowering the mentally & physically challenged children.. </p>
+        <a href="samrakshana.html">Learn more..</a> </div>
+      <!--box1 end-->
+    </aside>
+  </section>
+  <!--bottom section panel end-->
+  <!--bottom pannel-->
+  <div class="svr-bottompanel">
+    <!--video gallery-->
+    <div class="svr-videobottom"> 
+     <h1>Video Gallery:</h1>
+     <div class="svr-videobottom-inner">
+	 <iframe width="320" height="237" src="https://www.youtube.com/embed/4eTC4UmFFB8" frameborder="0" allowfullscreen></iframe>
+
+	
+	 </div>
+          <div class="svr-videobottom-inner-link"> <a href="video.html">More...</a></div>
+     </div>
+    
+    <!--gallery-->
+    <div class="svr-gallerybottom"> 
+      <h1>Photo Gallery:</h1>
+     <div class="svr-gallerybottom-inner">
+     <div class="image-set">
+					<a class="example-image-link" href="images/vlct-banner.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+                         <img class="example-image" src="images/vlct-banner.png" alt="" style="width: 143px;height: 91px;"></a>
+
+					<a class="example-image-link" href="self/5.JPG" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="self/5_s.jpg" alt="" /></a>
+					<a class="example-image-link" href="images/vlct-banner.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+                         <img class="example-image" src="images/vlct-banner.png" alt="" style="width: 143px;height: 91px;"></a>
+
+					<a class="example-image-link" href="self/14.JPG" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="self/14_s.jpg" alt="" /></a>
+					<a class="example-image-link" href="self/17.JPG" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+                         <img class="example-image" src="self/17_s.jpg" alt=""/></a>
+					<a class="example-image-link" href="self/12.JPG" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="self/12_s.jpg" alt="" /></a>
+				</div>
+               <div class="svr-videobottom-inner-link"> <a href="gallery.html">More...</a></div> <br/> <br/>
+			  
+     </div>
+     </div>
+    <!--gallery-->
+  </div>
+  <!--bottom panel end-->
+  <!--container end-->
+</div>
+<footer>
+  <div class="Footer-content">
+    <div class="footer-copyright">VLCT &#169; 2004-2018 </div>
+    <div class="footer-nav"> <a href="index.html">Home</a> | <a href="aboutus.html">About us</a> | <a href="index.html#">Our Services</a> | <a href="index.html#">Our Activities</a> | <a href="index.html#">Our Project</a> | <a href="index.html#">Gallery</a> | <a href="contactus.html">Contact us</a></div>
+	  
+                            
+    <div class="footer-developeby"><a href="http://www.kakatiyasolutions.com/"><img src="images/kakatiya-logo.jpg" alt="Developed by kakatiya solutions" title="Developed by kakatiya solutions" /></a></div>
+  </div>
+  
+</footer>
+<div class="counter" style="
+    text-align: center;
+    background-color: #006699;
+">
+  <!-- hitwebcounter Code START -->
+<a href="index.html" target="_blank">
+<img src="http://hitwebcounter.com/counter/counter.php?page=6230974&style=0001&nbdigits=5&type=ip&initCount=2000" title="URL Counter" Alt="URL Counter"   border="0" >
+</a>                                        <br/>
+                                        <!-- hitwebcounter.com --><a href="http://www.hitwebcounter.com" title="Web Tracker" 
+                                        target="_blank" style="font-family: sans-serif, Arial, Helvetica; 
+                                        font-size: 12px; color: #6E7A76; text-decoration: underline ;"><em></em>
+                                        </a> 
+</div>
+</body>
+</html>
+
