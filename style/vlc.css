@@ -2,6 +2,7 @@
 /* CSS Document */
 * {
     max-width: 100%;
+    box-sizing: border-box;
 }
 .footer-developeby {
     display: none !important;
@@ -259,7 +260,7 @@ color:#e14b1a; text-decoration:underline;
 	margin:0px 0 10px 0;
 }
 @media (max-width:500px) {
-    .ceomsg, .bleftaside, .brightaside {
+    .ceomsg, .bleftaside, .brightaside, .ceomsg-vlcinner {
         padding:0;
         margin:0;
     }
@@ -389,7 +390,6 @@ background: url(../images/nav.jpg) repeat left top;
     height: auto;
     line-height: 1;
     display: block;
-    white-space: nowrap;
     float: none;
     text-transform: none;
 }

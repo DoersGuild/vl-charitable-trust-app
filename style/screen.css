@@ -3,6 +3,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 * {
 	max-width: 100%;
+	box-sizing: border-box;
 }
 .footer-developeby {
 	display: none !important;
