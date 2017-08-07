@@ -23,7 +23,7 @@ body {
 #maincontainer {
 	width:1022px;
 	height:auto;
-	overflow:hidden;
+	overflow:auto;
 	background:#fff;
 	font-family:Calibri, Arial, Verdana;
 	font-size:14px;
@@ -91,7 +91,7 @@ body {
 	width:980px;
 	float:left;margin:10px 0 0 10px;
 	height:auto;
-	overflow:hidden;
+	overflow:auto;
 	box-shadow: 0 0 6px 1px #D1D2D2;
 	padding: 10px 10px;
 	-webkit-box-shadow: 0 0 6px 1px #D1D2D2;
@@ -257,6 +257,12 @@ color:#e14b1a; text-decoration:underline;
 	width:462px;
 	padding:0 21px 10px 25px;
 	margin:0px 0 10px 0;
+}
+@media (max-width:500px) {
+    .ceomsg, .bleftaside, .brightaside {
+        padding:0;
+        margin:0;
+    }
 }
 footer{ background:#006699; color:#fff; height: auto; overflow:hidden; margin:0 auto;}
 .Footer-content{width:1022px;
