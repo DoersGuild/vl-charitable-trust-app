@@ -404,6 +404,15 @@ jQuery(document).ready(function($) {
   </div>
   
 </footer>
+<script type="text/javascript">
+  if (typeof navigator !== "undefined" && navigator !== null) {
+    if ((_ref = navigator.splashscreen) != null) {
+      if (typeof _ref.hide === "function") {
+        _ref.hide();
+      }
+    }
+  }
+</script>
 </body>
 </html>
 

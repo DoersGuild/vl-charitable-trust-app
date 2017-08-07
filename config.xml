@@ -2,7 +2,7 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 xmlns:gap = "http://phonegap.com/ns/1.0"
 id        = "com.doersguild.vlcharitabletrust"
-version   = "1.0.0">
+version   = "1.0.1">
 
     <name>VL Charitable Trust</name>
     <description>Vasantha Lakshmi Charitable Trust and Research Center</description>
@@ -10,8 +10,8 @@ version   = "1.0.0">
     <preference name="target-device" value="universal" />
     <preference name="android-targetSdkVersion" value="14" />
     
-    <preference name="splash-screen-duration" value="3000" />
-    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="splash-screen-duration" value="20000" />
+    <preference name="auto-hide-splash-screen" value="false" />
     
     <preference name="orientation" value="default" />
     
@@ -32,6 +32,6 @@ version   = "1.0.0">
     <icon src="icons/android/res/mipmap-xxhdpi/ic_launcher.png" gap:platform="android" gap:density="xxhdpi" />
     
 
-    <splash src="splash.png" />
+    <splash src="splash.png" gap:role="default" />
 
 </widget>
